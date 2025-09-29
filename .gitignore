@@ -1,0 +1,30 @@
+# Quartus-generated temporary and synthesis files
+*.bak
+*.qws
+*.rpt
+*.summary
+*.jdi
+*.sof
+*.pof
+*.sso
+*.hdb
+*.vdb
+
+# Simulation files
+simulation/
+*.wlf
+transcript
+*.vcd
+
+# Quartus-generated directories
+db/
+incremental_db/
+output_files/
+greybox_tmp/
+timing/
+hps_isw_handoff/
+quartus_log/
+
+# Misc
+c5_pin_model_core.txt
+*.qarlog
