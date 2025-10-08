@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY lab1
+set_global_assignment -name TOP_LEVEL_ENTITY MUX2to1_5
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:37:52  SEPTEMBER 25, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -48,7 +48,6 @@ set_global_assignment -name VERILOG_FILE fDiv50MHzto1Hz.v
 set_global_assignment -name VERILOG_FILE hw01_7seg.v
 set_global_assignment -name VERILOG_FILE MUX2to1_5.v
 set_global_assignment -name VERILOG_FILE AG_5.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE AG__5.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE AG_5.vwf
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -56,9 +55,6 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name QIP_FILE mem_lab1.qip
 set_global_assignment -name BDF_FILE lab1.bdf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name ENABLE_OCT_DONE OFF
 set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
 set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
@@ -92,5 +88,11 @@ set_location_assignment PIN_AH29 -to seg1[1]
 set_location_assignment PIN_AJ29 -to seg1[0]
 set_location_assignment PIN_AF14 -to Freq
 set_location_assignment PIN_AE12 -to SEL
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name BOARD "DE1-SoC Board"
+set_global_assignment -name VECTOR_WAVEFORM_FILE MUX2to1_5.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE fDiv50MHzto1Hz.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE hw01_7seg.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
